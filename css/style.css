@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 @font-face {
 	font-family: 'ElegantIcons';
 	src:url('fonts/ElegantIcons.eot');
