@@ -40,6 +40,20 @@ $(document).ready(function(){
     } // End if
   });
 });
+
+var $form = $('form#main_contact_'),
+    url = 'https://script.google.com/a/iitj.ac.in/macros/s/AKfycbz6Rvf7KgttvPO2iYfH0F6Fz6gNUxIBG6PD3zf55KuLl6SS1jms/exec'
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    // do something
+  );
+});
 </script>
 </head>
 
@@ -817,55 +831,56 @@ $(document).ready(function(){
                 <div class="col-12 col-sm-8">
                     <!-- Contact Form -->
                     <div class="contact_from_area mb-100 clearfix wow fadeInUp" data-wow-delay="300ms">
-                        <div class="contact_form">
-                            <form action="mail.php" method="post" id="main_contact_form">
+                        <div class="contact_form"><!--
+                            <form id="main_contact_form">
                                 <div class="contact_input_area">
                                     <div id="success_fail_info"></div>
                                     <div class="row">
-                                        <!-- Form Group -->
+                                        
                                         <div class="col-12 col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control mb-30" name="name" id="name" placeholder="Your Name">
+                                                <input type="text" class="form-control mb-30" name="fname" id="name" placeholder="Your Name">
                                             </div>
                                         </div>
-                                        <!-- Form Group -->
+                                        
                                         <div class="col-12 col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control mb-30" name="name" id="name2" placeholder="Last Name">
+                                                <input type="text" class="form-control mb-30" name="lname" id="name2" placeholder="Last Name">
                                             </div>
                                         </div>
-                                        <!-- Form Group -->
+                                        
                                         <div class="col-12 col-lg-6">
                                             <div class="form-group">
                                                 <input type="email" class="form-control mb-30" name="email" id="email" placeholder="E-mail">
                                             </div>
                                         </div>
-                                        <!-- Form Group -->
+                                        
                                         <div class="col-12 col-lg-6">
                                             <div class="form-group">
                                                 <input type="text" class="form-control mb-30" name="subject" id="subject" placeholder="Your Number">
                                             </div>
                                         </div>
-                                        <!-- Form Group -->
+                                        
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <textarea name="message" class="form-control mb-30" id="message" cols="30" rows="6" placeholder="Your Message *"></textarea>
                                             </div>
                                         </div>
-                                        <!-- Button -->
+                                        
                                         <div class="col-12">
-                                            <button type="submit" class="btn confer-btn">Send Message <i class="zmdi zmdi-long-arrow-right"></i></button>
+                                            <button type="submit" class="btn confer-btn" id="submit-form">Send Message <i class="zmdi zmdi-long-arrow-right"></i></button>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </form>-->
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfgglvwszp_AKoZ6JMovSmgD-4kK-Aw-sfPDRJdg-Y2opNWPA/viewform?embedded=true" width="640" height="740" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact Area End -->
+
 
     <!-- Footer Area Start -->
     <footer class="footer-area bg-img bg-overlay-2 section-padding-100-0">
