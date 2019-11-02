@@ -12,10 +12,10 @@
     width: 100%;
 
     .single-sponsor {
-        border: 1px solid $border-3;
+        border: 0px solid $border-3;
         @include flex(0 0 25%);
-        max-width: 25%;
-        width: 25%;
+        max-width: 105%;
+        width: 55%;
         height: 240px;
         @include display-flex(flex);
         @include align-items-center;
@@ -42,7 +42,7 @@
                 opacity: 0.5;
 
                 @media #{$breakpoint-lg} {
-                    max-height: 90px;
+                    max-height: 100px;
                 }
 
                 @media #{$breakpoint-md} {
